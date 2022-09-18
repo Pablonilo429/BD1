@@ -1,0 +1,68 @@
+
+USE TESTE;
+
+CREATE TABLE FUNCIONARIO(
+    Pnome VARCHAR(15) NOT NULL,
+    Minicial CHAR(1),
+    Unome VARCHAR(50) NOT NULL,
+    Cpf CHAR(11) NOT NULL,
+    Datanasc DATE NOT NULL,
+    Endereco VARCHAR(50) NOT NULL,
+    Sexo CHAR(1) NOT NULL,
+    Salario DECIMAL(10,2) NOT NULL,
+    Cpf_supervisor CHAR(11),
+    Dnr INT NOT NULL,
+
+    PRIMARY KEY (Cpf),
+    FOREIGN KEY (Cpf_supervisor) REFERENCES FUNCIONARIO(Cpf),
+    FOREIGN KEY(Dnr) REFERENCES DEPARTAMENTO(Dnumero)
+);
+
+CREATE TABLE DEPARTAMENTO(
+    Dnome VARCHAR(50) NOT NULL,
+    Dnumero INT NOT NULL,
+    Cpf_gerente CHAR(11) NOT NULL,
+    Data_inicio_gerente DATE NOT NULL,
+
+    PRIMARY KEY(Dnumero),
+    FOREIGN KEY (Cpf_gerente) REFERENCES FUNCIONARIO(Cpf)
+);
+
+CREATE TABLE LOCALIZACOES_DEP(
+    Dnumero INT NOT NULL, 
+    Dlocal INT NOT NULL,
+
+    PRIMARY KEY(Dnumero, Dlocal),
+    FOREIGN KEY(Dnumero) REFERENCES DEPARTAMENTO(Dnumero)
+);
+
+CREATE TABLE PROJETO(
+    Projnome VARCHAR(50) NOT NULL,
+    Projnumero INT NOT NULL,
+    Projlocal VARCHAR(50) NOT NULL,
+    Dnum INT NOT NULL,
+
+    PRIMARY KEY(Projnumero),
+    FOREIGN KEY(Projnumero) REFERENCES TRABALHA_EM(Pnr),
+    FOREIGN KEY(Dnum) REFERENCES DEPARTAMENTO(Dnumero)
+);
+
+CREATE TABLE TRABALHA_EM(
+    Fcpf CHAR(11) NOT NULL,
+    Pnr INT NOT NULL,
+    Horas INT NOT NULL,
+
+    PRIMARY KEY(Fcpf, Pnr),
+    FOREIGN KEY(Fcpf) REFERENCES FUNCIONARIO(Cpf),
+    FOREIGN KEY(Pnr) REFERENCES PROJETO(Projnumero)
+);
+
+CREATE TABLE DEPEDENTE(
+    Fcpf CHAR(11) NOT NULL,
+    Nome_dependente VARCHAR(50),
+    Sexo CHAR(1),
+    Parentesco VARCHAR(10),
+
+    PRIMARY KEY(Fcpf, Nome_dependente),
+    FOREIGN KEY(Fcpf) REFERENCES FUNCIONARIO(Cpf)
+);
