@@ -34,10 +34,10 @@ SELECT * FROM funcionario WHERE Cpf_supervisor = 'NULL';
 SELECT Fcpf, COUNT(Fcpf) FROM dependente GROUP BY fcpf;
 
 
-
 SELECT Pnome FROM funcionario inner join dependente on cpf=fcpf GROUP BY Pnome HAVING COUNT(Fcpf)>2 ;
 
+/*11- Exibir o número do departamento, o número de funcionários no departamento
+e o salário médio do departamento, para cada departamento da empresa*/
 
-
-
+SELECT Dnumero,count(cpf) numfuncionarios,avg(salario) media FROM departamento inner join funcionario on Dnumero=Dnr group by Dnumero;
 
