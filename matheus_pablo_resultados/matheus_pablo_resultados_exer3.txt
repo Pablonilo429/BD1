@@ -1,0 +1,4 @@
+"João","B","Silva","Rua da Flores, 751, São Paulo, SP"
+"Fernando","T","Wong","Rua da Lapa, 34, São Paulo, SP"
+"Joice","A","Leite","Av. Lucas Obes, 74, São Paulo, SP"
+"Ronaldo","K","Lima","Rua Rebouças, 65, Piracicaba, SP"

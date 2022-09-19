@@ -1,0 +1,7 @@
+"João","B","Silva","12345678966","1965-01-09","Rua da Flores, 751, São Paulo, SP","M","30.00","33344555587","5"
+"Fernando","T","Wong","33344555587","1955-12-08","Rua da Lapa, 34, São Paulo, SP","M","40.00","88866555576","5"
+"Joice","A","Leite","45345345376","1972-07-31","Av. Lucas Obes, 74, São Paulo, SP","F","25.00","33344555587","5"
+"Ronaldo","K","Lima","66688444476","1962-09-15","Rua Rebouças, 65, Piracicaba, SP","M","38.00","33344555587","5"
+"Jorge","E","Brito","88866555576","1937-11-10","Rua do Horto, 35, São Paulo, SP","M","55.00","NULL","1"
+"Jennifer","S","Souza","98765432168","1941-09-20","Av. Arthur de Lima, 54, Santo André, SP","F","43.00","88866555576","4"
+"André","V","Pereira","98798798733","1969-03-29","Rua Timbira, 35, São Paulo, SP","M","25.00","98765432168","4"

@@ -1,0 +1,8 @@
+"Alice","Zelaya","Jennifer","Souza"
+"André","Pereira","Jennifer","Souza"
+"Fernando","Wong","Jorge","Brito"
+"Jennifer","Souza","Jorge","Brito"
+"João","Silva","Fernando","Wong"
+"Joice","Leite","Fernando","Wong"
+"Jorge","Brito","Jorge","Brito"
+"Ronaldo","Lima","Fernando","Wong"
