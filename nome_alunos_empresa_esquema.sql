@@ -61,6 +61,7 @@ CREATE TABLE DEPENDENTE(
     Fcpf CHAR(11) NOT NULL,
     Nome_dependente VARCHAR(50),
     Sexo CHAR(1),
+    Datanasc DATE,
     Parentesco VARCHAR(10),
 
     PRIMARY KEY(Fcpf, Nome_dependente),
